@@ -17,3 +17,4 @@ Saved to `/var/lib/sddm/.config/scyrolynx-serpantinum.conf`. Static options: the
 ## Test status
 Verified (PySide6 6.12, offscreen software renderer, mocked SDDM, `tools/preview.py`): loads with 0 QML warnings at 1920x1080; typing on the lock screen opens the form and `sddm.login` receives user/password/session index; drag and resize of blocks work and persist to the settings file; wallpaper folder scan lists images; telemetry reads /proc.
 NOT verified: real SDDM greeter, real PAM/fprintd, MultiEffect blur (software renderer can't draw it), writing the settings file as user `sddm`, multi-monitor, power actions, FolderListModel on your real wallpaper folder, SDDM's `keyboard` object shape (guarded, falls back to "-"). Check versions: `pacman -Q sddm qt6-base qt6-declarative`.
+# Mine-G

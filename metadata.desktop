@@ -1,0 +1,12 @@
+[SddmGreeterTheme]
+Name=ScyrolynX Serpantinum
+Description=Two-stage lock screen + dashboard greeter inspired by Serpantinum
+Author=ScyrolynX
+Version=1.0
+Type=sddm-theme
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=scyrolynx-serpantinum
+Theme-API=2.0
+QtVersion=6
+Screenshot=assets/images/preview-lock.png

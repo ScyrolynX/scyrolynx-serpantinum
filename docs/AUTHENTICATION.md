@@ -24,3 +24,17 @@ Add as the FIRST auth line (keep everything else):
 auth       sufficient   pam_fprintd.so
 ```
 Disable the button instead: `fingerprint_enabled=false` in theme.conf.
+
+## Live system cards (CPU / RAM / temp / battery / uptime)
+QML may read local files only if the greeter starts with `QML_XHR_ALLOW_FILE_READ=1`:
+```
+sudo tee /etc/sddm.conf.d/98-scyrolynx-env.conf <<'CONF'
+[General]
+GreeterEnvironment=QML_XHR_ALLOW_FILE_READ=1
+CONF
+```
+Without it the cards show `n/a` and the header says NO TELEMETRY; nothing else breaks. Disable polling with `telemetry=false`.
+
+## Notes on the UI "cooldown"
+After 3 failed attempts the form locks for 2/4/8/16/30 s. This is a UI delay only; real throttling is PAM's job (`pam_faillock`).
+The scratchpad text is stored unencrypted and is visible on the lock screen: do not put secrets in it.

@@ -1,12 +1,12 @@
 [SddmGreeterTheme]
 Name=ScyrolynX Serpantinum
-Description=Two-stage lock screen + dashboard greeter inspired by Serpantinum
+Description=Tech-HUD lock screen + login dashboard. Every block is movable and resizable; wallpaper folder picker
 Author=ScyrolynX
-Version=1.0
+Version=2.0
 Type=sddm-theme
 MainScript=Main.qml
 ConfigFile=theme.conf
 Theme-Id=scyrolynx-serpantinum
 Theme-API=2.0
 QtVersion=6
-Screenshot=assets/images/preview-lock.png
+Screenshot=docs/img/preview-lock.png

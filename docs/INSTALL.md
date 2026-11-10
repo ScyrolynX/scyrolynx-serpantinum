@@ -4,7 +4,9 @@ sudo cp -r scyrolynx-serpantinum /usr/share/sddm/themes/
 sudo chmod -R a+rX /usr/share/sddm/themes/scyrolynx-serpantinum
 sudo mkdir -p /var/lib/sddm/.config && sudo chown sddm:sddm /var/lib/sddm/.config
 ```
-Wallpaper/avatar: edit `theme.conf` (absolute path, readable by user `sddm`; or drop files in assets/images/).
+Wallpapers: Customize -> Wallpaper -> type a folder path (absolute, readable by user `sddm`, e.g. /usr/share/backgrounds), or set `wallpaper_dir` in theme.conf. If a folder is under your $HOME: `sudo setfacl -m u:sddm:rx ~ ~/Pictures ~/Pictures/walls`.
+Avatar: `avatar=` in theme.conf, or the account icon SDDM provides.
+Recommended fonts: JetBrains Mono, Inter (`pacman -S ttf-jetbrains-mono inter-font`).
 
 ## Test (windowed, from your Hyprland session)
 ```
